@@ -1,4 +1,24 @@
 import { Component } from '@angular/core';
+import { Pensamento } from '../pensamento';
+
+
+
+const breed = [
+  {
+    breedMin: 0,
+    breedMax: 0
+  },
+  {
+    breedMin: 1,
+    breedMax: 1
+  },
+  {
+    breedMin: 2,
+    breedMax: 7
+  },
+]
+
+
 
 @Component({
   selector: 'app-listar-pensamentos',
@@ -7,38 +27,7 @@ import { Component } from '@angular/core';
 })
 export class ListarPensamentosComponent {
   
-  listaPensamentos = [
-    {
-      id: '1',
-      conteudo: 'I Love Angula',
-      autoria: 'Minha autoria',
-      modelo: 'modelo3',
-    },
-    {
-      id: '2',
-      conteudo: 'É fazendo merda que se aduba a vida',
-      autoria: 'Fraldinha - 2017',
-      modelo: 'modelo1',
-    },
-    {
-      id: '3',
-      conteudo: 'Sabe porque que seus amigos novos te apoiam mais que as pessoas que te conhecem a muito tempo? Porque as pessoas que te conhecem há muito tempo demoram um tempão para entender que vocês vieram do mesmo lugar e continuam lá',
-      autoria: 'Yuri Gay - 2023',
-      modelo: 'modelo3',
-    },
-    {
-      id: '4',
-      conteudo: 'Acorde para o fracasso',
-      autoria: 'Yuri Paiva - 2023',
-      modelo: 'modelo2',
-    },
-    {
-      id: '4',
-      conteudo: 'Na minha maquina funciona',
-      autoria: 'Dev',
-      modelo: 'modelo1',
-    },
-  ]
+  listaPensamentos: Pensamento[] = []
 
   constructor() {}
 
@@ -46,3 +35,5 @@ export class ListarPensamentosComponent {
       
   }
 }
+
+
